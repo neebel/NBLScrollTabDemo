@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B49D1C01F90C2B50073EEFA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B49D1BF1F90C2B50073EEFA /* AppDelegate.m */; };
+		4B49D1C31F90C2B50073EEFA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B49D1C21F90C2B50073EEFA /* ViewController.m */; };
+		4B49D1C61F90C2B50073EEFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B49D1C41F90C2B50073EEFA /* Main.storyboard */; };
+		4B49D1C81F90C2B50073EEFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B49D1C71F90C2B50073EEFA /* Assets.xcassets */; };
+		4B49D1CB1F90C2B50073EEFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B49D1C91F90C2B50073EEFA /* LaunchScreen.storyboard */; };
+		4B49D1CE1F90C2B50073EEFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B49D1CD1F90C2B50073EEFA /* main.m */; };
+		4B49D1D81F90C2B50073EEFA /* NBLScrollTabDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B49D1D71F90C2B50073EEFA /* NBLScrollTabDemoTests.m */; };
+		4B49D1E31F90C2B50073EEFA /* NBLScrollTabDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B49D1E21F90C2B50073EEFA /* NBLScrollTabDemoUITests.m */; };
+		4B4BB93E1F90D11800F04AC9 /* DemoViewController0.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BB93D1F90D11800F04AC9 /* DemoViewController0.m */; };
+		4B4BB9441F90D14F00F04AC9 /* DemoViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BB9431F90D14F00F04AC9 /* DemoViewController1.m */; };
+		4B4BB9471F90D15E00F04AC9 /* DemoViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BB9461F90D15E00F04AC9 /* DemoViewController2.m */; };
+		4B4BB94A1F90D16F00F04AC9 /* DemoViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BB9491F90D16F00F04AC9 /* DemoViewController3.m */; };
+		4B4BB94B1F90D44700F04AC9 /* NBLScrollTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B49D1F21F90C2E30073EEFA /* NBLScrollTabController.m */; };
+		4B4BB94C1F90D44700F04AC9 /* NBLScrollTabItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B49D1F41F90C2E30073EEFA /* NBLScrollTabItem.m */; };
+		4B4BB94D1F90D44700F04AC9 /* NBLScrollTabItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B49D1F61F90C2E30073EEFA /* NBLScrollTabItemView.m */; };
+		4B4BB94E1F90D44700F04AC9 /* NBLScrollTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B49D1F81F90C2E30073EEFA /* NBLScrollTabView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4B49D1D41F90C2B50073EEFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B49D1B31F90C2B50073EEFA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B49D1BA1F90C2B50073EEFA;
+			remoteInfo = NBLScrollTabDemo;
+		};
+		4B49D1DF1F90C2B50073EEFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B49D1B31F90C2B50073EEFA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B49D1BA1F90C2B50073EEFA;
+			remoteInfo = NBLScrollTabDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4B49D1BB1F90C2B50073EEFA /* NBLScrollTabDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NBLScrollTabDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B49D1BE1F90C2B50073EEFA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4B49D1BF1F90C2B50073EEFA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4B49D1C11F90C2B50073EEFA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4B49D1C21F90C2B50073EEFA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4B49D1C51F90C2B50073EEFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4B49D1C71F90C2B50073EEFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4B49D1CA1F90C2B50073EEFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4B49D1CC1F90C2B50073EEFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B49D1CD1F90C2B50073EEFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4B49D1D31F90C2B50073EEFA /* NBLScrollTabDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NBLScrollTabDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B49D1D71F90C2B50073EEFA /* NBLScrollTabDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NBLScrollTabDemoTests.m; sourceTree = "<group>"; };
+		4B49D1D91F90C2B50073EEFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B49D1DE1F90C2B50073EEFA /* NBLScrollTabDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NBLScrollTabDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B49D1E21F90C2B50073EEFA /* NBLScrollTabDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NBLScrollTabDemoUITests.m; sourceTree = "<group>"; };
+		4B49D1E41F90C2B50073EEFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B49D1F11F90C2E30073EEFA /* NBLScrollTabController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NBLScrollTabController.h; sourceTree = "<group>"; };
+		4B49D1F21F90C2E30073EEFA /* NBLScrollTabController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NBLScrollTabController.m; sourceTree = "<group>"; };
+		4B49D1F31F90C2E30073EEFA /* NBLScrollTabItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NBLScrollTabItem.h; sourceTree = "<group>"; };
+		4B49D1F41F90C2E30073EEFA /* NBLScrollTabItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NBLScrollTabItem.m; sourceTree = "<group>"; };
+		4B49D1F51F90C2E30073EEFA /* NBLScrollTabItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NBLScrollTabItemView.h; sourceTree = "<group>"; };
+		4B49D1F61F90C2E30073EEFA /* NBLScrollTabItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NBLScrollTabItemView.m; sourceTree = "<group>"; };
+		4B49D1F71F90C2E30073EEFA /* NBLScrollTabView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NBLScrollTabView.h; sourceTree = "<group>"; };
+		4B49D1F81F90C2E30073EEFA /* NBLScrollTabView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NBLScrollTabView.m; sourceTree = "<group>"; };
+		4B4BB93C1F90D11800F04AC9 /* DemoViewController0.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController0.h; sourceTree = "<group>"; };
+		4B4BB93D1F90D11800F04AC9 /* DemoViewController0.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewController0.m; sourceTree = "<group>"; };
+		4B4BB9421F90D14F00F04AC9 /* DemoViewController1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController1.h; sourceTree = "<group>"; };
+		4B4BB9431F90D14F00F04AC9 /* DemoViewController1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewController1.m; sourceTree = "<group>"; };
+		4B4BB9451F90D15E00F04AC9 /* DemoViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController2.h; sourceTree = "<group>"; };
+		4B4BB9461F90D15E00F04AC9 /* DemoViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewController2.m; sourceTree = "<group>"; };
+		4B4BB9481F90D16F00F04AC9 /* DemoViewController3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController3.h; sourceTree = "<group>"; };
+		4B4BB9491F90D16F00F04AC9 /* DemoViewController3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewController3.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B49D1B81F90C2B50073EEFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B49D1D01F90C2B50073EEFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B49D1DB1F90C2B50073EEFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B49D1B21F90C2B50073EEFA = {
+			isa = PBXGroup;
+			children = (
+				4B49D1BD1F90C2B50073EEFA /* NBLScrollTabDemo */,
+				4B49D1D61F90C2B50073EEFA /* NBLScrollTabDemoTests */,
+				4B49D1E11F90C2B50073EEFA /* NBLScrollTabDemoUITests */,
+				4B49D1BC1F90C2B50073EEFA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4B49D1BC1F90C2B50073EEFA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B49D1BB1F90C2B50073EEFA /* NBLScrollTabDemo.app */,
+				4B49D1D31F90C2B50073EEFA /* NBLScrollTabDemoTests.xctest */,
+				4B49D1DE1F90C2B50073EEFA /* NBLScrollTabDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B49D1BD1F90C2B50073EEFA /* NBLScrollTabDemo */ = {
+			isa = PBXGroup;
+			children = (
+				4B49D1F01F90C2E30073EEFA /* NBLScrollTab */,
+				4B49D1BE1F90C2B50073EEFA /* AppDelegate.h */,
+				4B49D1BF1F90C2B50073EEFA /* AppDelegate.m */,
+				4B49D1C11F90C2B50073EEFA /* ViewController.h */,
+				4B49D1C21F90C2B50073EEFA /* ViewController.m */,
+				4B49D1C41F90C2B50073EEFA /* Main.storyboard */,
+				4B49D1C71F90C2B50073EEFA /* Assets.xcassets */,
+				4B49D1C91F90C2B50073EEFA /* LaunchScreen.storyboard */,
+				4B49D1CC1F90C2B50073EEFA /* Info.plist */,
+				4B49D1CD1F90C2B50073EEFA /* main.m */,
+				4B4BB93C1F90D11800F04AC9 /* DemoViewController0.h */,
+				4B4BB93D1F90D11800F04AC9 /* DemoViewController0.m */,
+				4B4BB9421F90D14F00F04AC9 /* DemoViewController1.h */,
+				4B4BB9431F90D14F00F04AC9 /* DemoViewController1.m */,
+				4B4BB9451F90D15E00F04AC9 /* DemoViewController2.h */,
+				4B4BB9461F90D15E00F04AC9 /* DemoViewController2.m */,
+				4B4BB9481F90D16F00F04AC9 /* DemoViewController3.h */,
+				4B4BB9491F90D16F00F04AC9 /* DemoViewController3.m */,
+			);
+			path = NBLScrollTabDemo;
+			sourceTree = "<group>";
+		};
+		4B49D1D61F90C2B50073EEFA /* NBLScrollTabDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				4B49D1D71F90C2B50073EEFA /* NBLScrollTabDemoTests.m */,
+				4B49D1D91F90C2B50073EEFA /* Info.plist */,
+			);
+			path = NBLScrollTabDemoTests;
+			sourceTree = "<group>";
+		};
+		4B49D1E11F90C2B50073EEFA /* NBLScrollTabDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4B49D1E21F90C2B50073EEFA /* NBLScrollTabDemoUITests.m */,
+				4B49D1E41F90C2B50073EEFA /* Info.plist */,
+			);
+			path = NBLScrollTabDemoUITests;
+			sourceTree = "<group>";
+		};
+		4B49D1F01F90C2E30073EEFA /* NBLScrollTab */ = {
+			isa = PBXGroup;
+			children = (
+				4B49D1F11F90C2E30073EEFA /* NBLScrollTabController.h */,
+				4B49D1F21F90C2E30073EEFA /* NBLScrollTabController.m */,
+				4B49D1F31F90C2E30073EEFA /* NBLScrollTabItem.h */,
+				4B49D1F41F90C2E30073EEFA /* NBLScrollTabItem.m */,
+				4B49D1F51F90C2E30073EEFA /* NBLScrollTabItemView.h */,
+				4B49D1F61F90C2E30073EEFA /* NBLScrollTabItemView.m */,
+				4B49D1F71F90C2E30073EEFA /* NBLScrollTabView.h */,
+				4B49D1F81F90C2E30073EEFA /* NBLScrollTabView.m */,
+			);
+			path = NBLScrollTab;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4B49D1BA1F90C2B50073EEFA /* NBLScrollTabDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B49D1E71F90C2B50073EEFA /* Build configuration list for PBXNativeTarget "NBLScrollTabDemo" */;
+			buildPhases = (
+				4B49D1B71F90C2B50073EEFA /* Sources */,
+				4B49D1B81F90C2B50073EEFA /* Frameworks */,
+				4B49D1B91F90C2B50073EEFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NBLScrollTabDemo;
+			productName = NBLScrollTabDemo;
+			productReference = 4B49D1BB1F90C2B50073EEFA /* NBLScrollTabDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4B49D1D21F90C2B50073EEFA /* NBLScrollTabDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B49D1EA1F90C2B50073EEFA /* Build configuration list for PBXNativeTarget "NBLScrollTabDemoTests" */;
+			buildPhases = (
+				4B49D1CF1F90C2B50073EEFA /* Sources */,
+				4B49D1D01F90C2B50073EEFA /* Frameworks */,
+				4B49D1D11F90C2B50073EEFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B49D1D51F90C2B50073EEFA /* PBXTargetDependency */,
+			);
+			name = NBLScrollTabDemoTests;
+			productName = NBLScrollTabDemoTests;
+			productReference = 4B49D1D31F90C2B50073EEFA /* NBLScrollTabDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4B49D1DD1F90C2B50073EEFA /* NBLScrollTabDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B49D1ED1F90C2B50073EEFA /* Build configuration list for PBXNativeTarget "NBLScrollTabDemoUITests" */;
+			buildPhases = (
+				4B49D1DA1F90C2B50073EEFA /* Sources */,
+				4B49D1DB1F90C2B50073EEFA /* Frameworks */,
+				4B49D1DC1F90C2B50073EEFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B49D1E01F90C2B50073EEFA /* PBXTargetDependency */,
+			);
+			name = NBLScrollTabDemoUITests;
+			productName = NBLScrollTabDemoUITests;
+			productReference = 4B49D1DE1F90C2B50073EEFA /* NBLScrollTabDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4B49D1B31F90C2B50073EEFA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = neebel;
+				TargetAttributes = {
+					4B49D1BA1F90C2B50073EEFA = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					4B49D1D21F90C2B50073EEFA = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4B49D1BA1F90C2B50073EEFA;
+					};
+					4B49D1DD1F90C2B50073EEFA = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4B49D1BA1F90C2B50073EEFA;
+					};
+				};
+			};
+			buildConfigurationList = 4B49D1B61F90C2B50073EEFA /* Build configuration list for PBXProject "NBLScrollTabDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4B49D1B21F90C2B50073EEFA;
+			productRefGroup = 4B49D1BC1F90C2B50073EEFA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4B49D1BA1F90C2B50073EEFA /* NBLScrollTabDemo */,
+				4B49D1D21F90C2B50073EEFA /* NBLScrollTabDemoTests */,
+				4B49D1DD1F90C2B50073EEFA /* NBLScrollTabDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4B49D1B91F90C2B50073EEFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B49D1CB1F90C2B50073EEFA /* LaunchScreen.storyboard in Resources */,
+				4B49D1C81F90C2B50073EEFA /* Assets.xcassets in Resources */,
+				4B49D1C61F90C2B50073EEFA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B49D1D11F90C2B50073EEFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B49D1DC1F90C2B50073EEFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4B49D1B71F90C2B50073EEFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B4BB94B1F90D44700F04AC9 /* NBLScrollTabController.m in Sources */,
+				4B4BB94C1F90D44700F04AC9 /* NBLScrollTabItem.m in Sources */,
+				4B4BB94D1F90D44700F04AC9 /* NBLScrollTabItemView.m in Sources */,
+				4B4BB94E1F90D44700F04AC9 /* NBLScrollTabView.m in Sources */,
+				4B4BB93E1F90D11800F04AC9 /* DemoViewController0.m in Sources */,
+				4B4BB94A1F90D16F00F04AC9 /* DemoViewController3.m in Sources */,
+				4B49D1C31F90C2B50073EEFA /* ViewController.m in Sources */,
+				4B49D1CE1F90C2B50073EEFA /* main.m in Sources */,
+				4B49D1C01F90C2B50073EEFA /* AppDelegate.m in Sources */,
+				4B4BB9471F90D15E00F04AC9 /* DemoViewController2.m in Sources */,
+				4B4BB9441F90D14F00F04AC9 /* DemoViewController1.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B49D1CF1F90C2B50073EEFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B49D1D81F90C2B50073EEFA /* NBLScrollTabDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B49D1DA1F90C2B50073EEFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B49D1E31F90C2B50073EEFA /* NBLScrollTabDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4B49D1D51F90C2B50073EEFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B49D1BA1F90C2B50073EEFA /* NBLScrollTabDemo */;
+			targetProxy = 4B49D1D41F90C2B50073EEFA /* PBXContainerItemProxy */;
+		};
+		4B49D1E01F90C2B50073EEFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B49D1BA1F90C2B50073EEFA /* NBLScrollTabDemo */;
+			targetProxy = 4B49D1DF1F90C2B50073EEFA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4B49D1C41F90C2B50073EEFA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B49D1C51F90C2B50073EEFA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4B49D1C91F90C2B50073EEFA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B49D1CA1F90C2B50073EEFA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4B49D1E51F90C2B50073EEFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4B49D1E61F90C2B50073EEFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4B49D1E81F90C2B50073EEFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NBLScrollTabDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.neebel.NBLScrollTabDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4B49D1E91F90C2B50073EEFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NBLScrollTabDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.neebel.NBLScrollTabDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4B49D1EB1F90C2B50073EEFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NBLScrollTabDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.neebel.NBLScrollTabDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NBLScrollTabDemo.app/NBLScrollTabDemo";
+			};
+			name = Debug;
+		};
+		4B49D1EC1F90C2B50073EEFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NBLScrollTabDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.neebel.NBLScrollTabDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NBLScrollTabDemo.app/NBLScrollTabDemo";
+			};
+			name = Release;
+		};
+		4B49D1EE1F90C2B50073EEFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NBLScrollTabDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.neebel.NBLScrollTabDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NBLScrollTabDemo;
+			};
+			name = Debug;
+		};
+		4B49D1EF1F90C2B50073EEFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NBLScrollTabDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.neebel.NBLScrollTabDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NBLScrollTabDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B49D1B61F90C2B50073EEFA /* Build configuration list for PBXProject "NBLScrollTabDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B49D1E51F90C2B50073EEFA /* Debug */,
+				4B49D1E61F90C2B50073EEFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B49D1E71F90C2B50073EEFA /* Build configuration list for PBXNativeTarget "NBLScrollTabDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B49D1E81F90C2B50073EEFA /* Debug */,
+				4B49D1E91F90C2B50073EEFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B49D1EA1F90C2B50073EEFA /* Build configuration list for PBXNativeTarget "NBLScrollTabDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B49D1EB1F90C2B50073EEFA /* Debug */,
+				4B49D1EC1F90C2B50073EEFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B49D1ED1F90C2B50073EEFA /* Build configuration list for PBXNativeTarget "NBLScrollTabDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B49D1EE1F90C2B50073EEFA /* Debug */,
+				4B49D1EF1F90C2B50073EEFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4B49D1B31F90C2B50073EEFA /* Project object */;
+}
