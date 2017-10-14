@@ -8,15 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-
 @interface NBLScrollTabItem : NSObject
 
-@property (nonatomic, strong) NSString          *title;
-@property (nonatomic, strong) UIFont            *font;
-@property (nonatomic, strong) UIColor           *textColor;
-@property (nonatomic, strong) UIColor           *highlightColor;
-@property (nonatomic, assign) BOOL              isSelected;
-@property (nonatomic, assign) BOOL              hideBadge;
+@property (nonatomic, strong) NSString          *title;    //支持个性化配置
+@property (nonatomic, strong) UIFont            *font;     //支持个性化配置
+@property (nonatomic, strong) UIColor           *textColor;//支持个性化配置
+@property (nonatomic, strong) UIColor           *highlightColor;//支持个性化配置
+@property (nonatomic, assign) BOOL              isSelected;//暂时不支持个性化配置
+@property (nonatomic, assign) BOOL              hideBadge; //支持个性化配置
 
 @end
 

@@ -8,28 +8,21 @@
 
 #import <UIKit/UIKit.h>
 #import "NBLScrollTabView.h"
+#import "NBLScrollTabTheme.h"
 
 @protocol NBLScrollTabControllerDelegate;
 @protocol NBLScrollTabSubController;
 
 @interface NBLScrollTabController: UIViewController
 
-@property (nonnull, nonatomic, strong) NBLScrollTabView                    *tabView;
-@property (nonnull, nonatomic, strong) UIScrollView                         *scrollView;
-@property (nullable, nonatomic, copy) NSArray<__kindof UIViewController<NBLScrollTabSubController> *>  *viewControllers;
-@property (nullable, nonatomic, assign) __kindof UIViewController           *selectedViewController;
-@property (nonatomic, assign) NSUInteger                                    selectedIndex;
+@property (nullable, nonatomic, copy) NSArray<__kindof UIViewController<NBLScrollTabSubController> *> *viewControllers;
+@property (nullable, nonatomic, weak) id<NBLScrollTabControllerDelegate> delegate;
 
+- (nonnull instancetype)initWithTabTheme:(nonnull NBLScrollTabTheme *)tabTheme;
 
-@property (nullable, nonatomic, weak) id<NBLScrollTabControllerDelegate>   delegate;
-
-- (void)updateTabTitle:(nonnull NSString *)title atIndex:(NSInteger)index;
+- (void)updateTabTitle:(nonnull NSString *)title atIndex:(NSInteger)index;//update title at index
 
 @end
-
-
-
-
 
 @protocol NBLScrollTabControllerDelegate <NSObject>
 
@@ -40,17 +33,11 @@
 - (void)tabController:(NBLScrollTabController * __nonnull)tabController
 didSelectViewController:( UIViewController * __nonnull)viewController;
 
-
-
 @end
-
-
 
 @protocol NBLScrollTabSubController <NSObject>
 
-
 @property(null_resettable, nonatomic, strong) NBLScrollTabItem *tabItem;
-
 
 @end
 

@@ -10,15 +10,4 @@
 
 @implementation NBLScrollTabItem
 
-
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        _textColor = [UIColor blueColor];
-        _highlightColor = [UIColor redColor];
-    }
-    return self;
-}
-
 @end

@@ -28,12 +28,25 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.title = @"NBLScrollTabDemo";
     [self.view addSubview:self.scrollTabController.view];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.scrollTabController updateTabTitle:@"test" atIndex:2];//可以动态更新标题
+    });
 }
 
 
 - (NBLScrollTabController *)scrollTabController
 {
     if (!_scrollTabController) {
+//        NBLScrollTabTheme *theme = [[NBLScrollTabTheme alloc] init];
+//        theme.titleViewHeight = 80;
+//        theme.badgeViewColor = [UIColor greenColor];
+//        theme.titleViewBGColor = [UIColor blackColor];
+//        theme.indicatorViewColor = [UIColor greenColor];
+//        theme.titleFont = [UIFont systemFontOfSize:20];
+//        theme.titleColor = [UIColor yellowColor];
+//        theme.highlightColor = [UIColor greenColor];
+//        _scrollTabController = [[NBLScrollTabController alloc] initWithTabTheme:theme];
         _scrollTabController = [[NBLScrollTabController alloc] init];
         _scrollTabController.view.frame = self.view.bounds;
         _scrollTabController.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -51,7 +64,7 @@
         DemoViewController0 *demo0 = [[DemoViewController0 alloc] init];
         NBLScrollTabItem *demo0Item = [[NBLScrollTabItem alloc] init];
         demo0Item.title = @"新闻";
-        demo0Item.hideBadge = YES;
+        demo0Item.hideBadge = NO;//每个title可以做个性化配置
         demo0.tabItem = demo0Item;
         
         DemoViewController1 *demo1 = [[DemoViewController1 alloc] init];
@@ -64,12 +77,15 @@
         NBLScrollTabItem *demo2Item = [[NBLScrollTabItem alloc] init];
         demo2Item.title = @"娱乐";
         demo2Item.hideBadge = YES;
+        demo2Item.textColor = [UIColor blackColor]; //每个title可以做个性化配置
+        demo2Item.highlightColor = [UIColor yellowColor];//每个title可以做个性化配置
         demo2.tabItem = demo2Item;
         
         DemoViewController3 *demo3 = [[DemoViewController3 alloc] init];
         NBLScrollTabItem *demo3Item = [[NBLScrollTabItem alloc] init];
         demo3Item.title = @"八卦";
         demo3Item.hideBadge = YES;
+        demo3Item.font = [UIFont systemFontOfSize:10];//每个title可以做个性化配置
         demo3.tabItem = demo3Item;
         
         DemoViewController1 *demo4 = [[DemoViewController1 alloc] init];

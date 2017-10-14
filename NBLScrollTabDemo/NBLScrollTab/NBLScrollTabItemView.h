@@ -8,27 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "NBLScrollTabItem.h"
-
+#import "NBLScrollTabTheme.h"
 
 @interface NBLScrollTabItemView : UIControl
 
-@property (nonatomic, readonly) NBLScrollTabItem       *tabItem;
+@property (nonatomic, readonly) NBLScrollTabItem *tabItem;
+@property (nonatomic, readonly) CGFloat          fitWidth;
 
-@property (nonatomic, strong) UILabel                   *titleLabel;
-@property (nonatomic, strong) UIView                    *badgeView;
-@property (nonatomic, assign) CGFloat                   padding;
-@property (nonatomic, assign) CGFloat                   badgeWidth;
-@property (nonatomic, readonly) CGFloat                 fitWidth;
-
-
-
-- (instancetype)initWithTabItem:(NBLScrollTabItem *)tabItem;
-
-
+- (instancetype)initWithTabItem:(NBLScrollTabItem *)tabItem theme:(NBLScrollTabTheme *)theme;
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
-
-
 
 - (void)adjustBadgeView;
 

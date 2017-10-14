@@ -11,37 +11,35 @@
 
 @interface NBLScrollTabView()
 
-@property (nonatomic, strong) UIView        *innerView;
-@property (nonatomic, copy) NSArray         *tabItemViews;
-@property (nonatomic, assign) CGFloat       totalTabsWidth;
-
+@property (nonatomic, strong) UIView   *innerView;
+@property (nonatomic, copy)   NSArray  *tabItemViews;
+@property (nonatomic, assign) CGFloat  totalTabsWidth;
 @property (nonatomic, assign) UIEdgeInsets  scrollEdge;
+@property (nonatomic, strong) NBLScrollTabTheme *theme;
 
 @end
 
-
 @implementation NBLScrollTabView
 
-- (instancetype)initWithFrame:(CGRect)frame
+- (instancetype)initWithFrame:(CGRect)frame theme:(NBLScrollTabTheme *)theme
 {
     self = [super initWithFrame:frame];
     if (self) {
-
+        _theme = theme;
         _minSpacing = 20;
         _maxSpacing = 40;
         _selectedIndex = NSUIntegerMax;
-        _textFont = [UIFont systemFontOfSize:15.0f];
-
+        
         _scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
         _scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         _scrollView.showsHorizontalScrollIndicator = NO;
         _scrollView.alwaysBounceVertical = NO;
-        _scrollView.backgroundColor = [UIColor whiteColor];
+        _scrollView.backgroundColor = _theme.titleViewBGColor;
 
         _indicatorView = [[UIView alloc] initWithFrame:CGRectMake(0, frame.size.height - 2, 2, 2)];
         _innerView.autoresizingMask = (UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin);
         _indicatorView.hidden = YES;
-        _indicatorView.backgroundColor = [UIColor redColor];
+        _indicatorView.backgroundColor = _theme.indicatorViewColor;
         [_scrollView addSubview:_indicatorView];
 
         [self addSubview:_scrollView];
@@ -79,7 +77,6 @@
     }
     _selectedIndex = index;
 
-
     [self shiftIndicatorToIndex:index animated:YES];
     if ([self.delegate respondsToSelector:@selector(tabView:didSelectIndex:)]) {
         [self.delegate tabView:self didSelectIndex:index];
@@ -111,13 +108,11 @@
         nextItemFrame = [self.tabItemViews[pageIndex + 1] frame];
     }
 
-
     CGFloat paddingOffset = offset - pageIndex;
     CGFloat xOffset = startItemFrame.origin.x + (nextItemFrame.origin.x - startItemFrame.origin.x) * paddingOffset;
     CGFloat paddingWidth = (nextItemFrame.size.width - startItemFrame.size.width) * paddingOffset;
     CGRect indicatorFrame = CGRectMake(xOffset, self.scrollView.frame.size.height - 2, startItemFrame.size.width + paddingWidth, 2);
     self.indicatorView.frame = indicatorFrame;
-
 }
 
 
@@ -162,7 +157,6 @@
     self.totalTabsWidth = totalWidth;
     [self layoutTabItemViews];
     [self.scrollView bringSubviewToFront:self.indicatorView];
-
 }
 
 #pragma mark - TabItems
@@ -172,7 +166,6 @@
     [self loadTabItems:tabItems];
     self.selectedIndex = 0;
     [self adjustIndicatorView:self.selectedIndex];
-    
 }
 
 
@@ -181,7 +174,6 @@
     if (self.tabItemViews.count == 0) {
         return;
     }
-
 
     CGFloat averageSpacing = floor((self.frame.size.width - self.totalTabsWidth)/(self.tabItemViews.count + 1));
     CGFloat spacing = MIN(MAX(averageSpacing, self.minSpacing), self.maxSpacing);
@@ -222,18 +214,14 @@
 }
 
 
-
 - (NBLScrollTabItemView *)buildTabItemView:(NBLScrollTabItem *)tabItem
 {
-    NBLScrollTabItemView *itemView = [[NBLScrollTabItemView alloc] initWithTabItem:tabItem];
+    NBLScrollTabItemView *itemView = [[NBLScrollTabItemView alloc] initWithTabItem:tabItem theme:self.theme];
     itemView.frame = CGRectMake(0, 0, 80, self.frame.size.height);
-    itemView.titleLabel.font = self.textFont;
     itemView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [itemView addTarget:self action:@selector(itemSelAction:) forControlEvents:UIControlEventTouchUpInside];
-    
     return itemView;
 }
-
 
 #pragma mark - Action
 
@@ -242,7 +230,6 @@
     NSInteger index = [self.tabItemViews indexOfObject:sender];
     [self setSelectedIndex:index animated:YES];
 }
-
 
 #pragma mark - Indicator
 //移动indicatorview到某一页
@@ -278,7 +265,6 @@
 
     CGFloat maxLeft = self.scrollView.contentSize.width - self.frame.size.width;
     CGFloat centerSelItemOffsetX = (selItemFrame.origin.x + selItemFrame.size.width/2) - self.frame.size.width/2;
-
 
     //右边
     if ((selItemCenter > self.frame.size.width/2 || selItemRight > self.frame.size.width)

@@ -9,13 +9,17 @@
 #import "NBLScrollTabItemView.h"
 
 static NSInteger const kNBLInvalidWidth = -1;
+
 @interface NBLScrollTabItemView()
 
-@property (nonatomic, assign) CGFloat      cachedWidth;
+@property (nonatomic, assign) CGFloat cachedWidth;
+@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UIView  *badgeView;
+@property (nonatomic, assign) CGFloat padding;
+@property (nonatomic, assign) CGFloat badgeWidth;
+@property (nonatomic, strong) NBLScrollTabTheme *theme;
 
 @end
-
-
 
 @implementation NBLScrollTabItemView
 
@@ -24,10 +28,12 @@ static NSInteger const kNBLInvalidWidth = -1;
     [_tabItem removeObserver:self forKeyPath:@"hideBadge"];
 }
 
-- (instancetype)initWithTabItem:(NBLScrollTabItem *)tabItem
+
+- (instancetype)initWithTabItem:(NBLScrollTabItem *)tabItem theme:(NBLScrollTabTheme *)theme
 {
     self = [self initWithFrame:CGRectMake(0, 0, 80, 40)];
     if (self) {
+        _theme = theme;
         _padding = 0;
         _badgeWidth = 8;
         _cachedWidth = kNBLInvalidWidth;
@@ -35,14 +41,14 @@ static NSInteger const kNBLInvalidWidth = -1;
         _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(_padding, 0, self.frame.size.width - 2*_padding, self.frame.size.height)];
         _titleLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         _titleLabel.textAlignment = NSTextAlignmentCenter;
-        _titleLabel.font = tabItem.font ? : [UIFont systemFontOfSize:15];
-        _titleLabel.textColor = tabItem.textColor;
-        _titleLabel.highlightedTextColor = tabItem.highlightColor;
+        _titleLabel.font = tabItem.font ? : self.theme.titleFont;
+        _titleLabel.textColor = tabItem.textColor ? tabItem.textColor : self.theme.titleColor;
+        _titleLabel.highlightedTextColor = tabItem.highlightColor ? tabItem.highlightColor : self.theme.highlightColor;
         _titleLabel.text = tabItem.title;
         [self addSubview:_titleLabel];
 
         _badgeView = [[UIView alloc] initWithFrame:CGRectMake(_titleLabel.frame.origin.x + _titleLabel.frame.size.width - _badgeWidth/2 - 2, 10, _badgeWidth, _badgeWidth)];
-        _badgeView.backgroundColor = [UIColor colorWithRed:0.9877 green:0.2833 blue:0.0299 alpha:1.0];
+        _badgeView.backgroundColor = self.theme.badgeViewColor;
         _badgeView.layer.cornerRadius = _badgeWidth/2;
         _badgeView.hidden = tabItem.hideBadge;
         [self addSubview:_badgeView];
@@ -113,7 +119,6 @@ static NSInteger const kNBLInvalidWidth = -1;
     if (self.isSelected == selected) {
         return;
     }
-
 
     if (animated) {
         [UIView animateWithDuration:0.3 animations:^{
