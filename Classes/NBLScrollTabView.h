@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "NBLScrollTabItemView.h"
+#import "NBLScrollTabTheme.h"
 
 @class NBLScrollTabView;
+
 @protocol NBLScrollTabViewDelegate <NSObject>
 
 - (void)tabView:(NBLScrollTabView *)tabView didSelectIndex:(NSUInteger)index;
@@ -20,19 +22,15 @@
 
 @property (nonatomic, strong) UIScrollView      *scrollView;
 @property (nonatomic, strong) UIView            *indicatorView;
-@property (nonatomic, strong) UIFont            *textFont;
-@property (nonatomic, strong) UIColor           *tintColor;
-@property (nonatomic, strong) UIColor           *hightlightColor;
-
 @property (nonatomic, assign) CGFloat           maxSpacing;     //default = 40;
 @property (nonatomic, assign) CGFloat           minSpacing;     //default = 20;
 
-
-@property (nonatomic, copy) NSArray<NBLScrollTabItem *>    *tabItems;
+@property (nonatomic, copy)   NSArray<NBLScrollTabItem *>   *tabItems;
 @property (nonatomic, assign) NSUInteger                    selectedIndex;
 
-@property (nonatomic, weak) id<NBLScrollTabViewDelegate>   delegate;
+@property (nonatomic, weak)   id<NBLScrollTabViewDelegate>  delegate;
 
+- (instancetype)initWithFrame:(CGRect)frame theme:(NBLScrollTabTheme *)theme;
 
 //设置选中某页
 - (void)setSelectedIndex:(NSUInteger)index animated:(BOOL)animated;
@@ -41,6 +39,5 @@
 - (void)updateWithTabPageOffset:(CGFloat)offset;
 
 - (void)updateTabItems:(NSArray<NBLScrollTabItem *> *)tabItems;
-
 
 @end
